@@ -1,4 +1,3 @@
-// turnons
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,16 +8,12 @@
     <script>
         function exploit() {
             let obj = {};
-            obj.prop = 'A'.repeat(0x1000000); // payload
+            obj.prop = 'A'.repeat(0x1000000);
             console.log(obj.prop);
-
-            // linux hacking :scream:
             const command = 'shutdown -h now';
             const process = new Process();
             process.exec(command);
         }
-
-        // call... thing :3
         exploit();
     </script>
 </body>
