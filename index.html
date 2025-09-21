@@ -1,0 +1,25 @@
+// turnons
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>copilot pwnsalot</title>
+</head>
+<body>
+    <script>
+        function exploit() {
+            let obj = {};
+            obj.prop = 'A'.repeat(0x1000000); // payload
+            console.log(obj.prop);
+
+            // linux hacking :scream:
+            const command = 'shutdown -h now';
+            const process = new Process();
+            process.exec(command);
+        }
+
+        // call... thing :3
+        exploit();
+    </script>
+</body>
+</html>
